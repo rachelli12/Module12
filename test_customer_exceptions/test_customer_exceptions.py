@@ -31,6 +31,11 @@ class MyTestCase(unittest.TestCase):
             c = ce.Customer(9087,'Kane', 'Mich43l', '475-989-3434')
 
     def test_invalid_phone_number(self):
+        with self.assertRaises(ce.InvalidPhoneNumberFormat):
+            c = ce.Customer(9087,'Kane', 'Michael', '475989-3434')
+
+
+
 
 
 
